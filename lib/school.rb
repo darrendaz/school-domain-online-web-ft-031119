@@ -9,17 +9,17 @@ class School
   
   def add_student(student_name, age)
     # @roster[age] = [] unless @roster[age]
-    roster[age] ||= []
-    roster[age] << student_name
+    @roster[age] ||= []
+    @roster[age] << student_name
   end
   
   def grade(grade)
-    roster[grade]
+    @roster[grade]
   end
   
   def sort
-    roster.each{|grade, students|
-      roster[grade] = students.sort
+    @roster.each{|grade, students|
+      @roster[grade] = students.sort
     }
   end
 end
